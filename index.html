@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Zarqa’s Aesthetic Skin Clinic — Lahore</title>
+  <meta name="description" content="Premium dermatology & aesthetic treatments in Lahore. Botox, fillers, lasers, RF microneedling, PRP, exosomes, HydraFacial & more." />
+  <meta property="og:title" content="Dr. Zarqa’s Aesthetic Skin Clinic — Lahore" />
+  <meta property="og:description" content="Luxury, safety-first, results-driven dermatology & aesthetics." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            serif: ['Playfair Display', 'ui-serif']
+          },
+          colors: {
+            ink: '#0b0b0f',
+            ivory: '#f7f4ee',
+            gold: '#bfa36a',
+            stone2: '#e7e2d8'
+          },
+          boxShadow: {
+            soft: '0 12px 40px rgba(0,0,0,.08)',
+            glow: '0 12px 50px rgba(191,163,106,.18)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Subtle film grain (luxury feel) */
+    .grain:before {
+      content:"";
+      position:absolute; inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
+      pointer-events:none;
+      mix-blend-mode: multiply;
+    }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.is-in { opacity: 1; transform: translateY(0); }
+    .glass { background: rgba(255,255,255,.72); backdrop-filter: blur(12px); }
+    .glass-dark { background: rgba(11,11,15,.45); backdrop-filter: blur(12px); }
+  </style>
+</head>
+
+<body class="bg-ivory text-ink">
+  <!-- Top sticky bar -->
+  <div class="w-full bg-ink text-ivory text-sm">
+    <div class="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between gap-4">
+      <p class="opacity-90">Luxury dermatology & aesthetics in Lahore — safety-first, results-driven.</p>
+      <div class="hidden sm:flex items-center gap-3">
+        <a class="underline underline-offset-4 hover:text-gold" href="#locations">2 branches</a>
+        <span class="opacity-50">•</span>
+        <a class="underline underline-offset-4 hover:text-gold" href="#book">Book now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 bg-ivory/85 backdrop-blur border-b border-black/5">
+    <nav class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between gap-4">
+      <a href="#" class="flex items-center gap-3">
+        <!-- Replace with your logo -->
+        <div class="h-10 w-10 rounded-full bg-ink text-ivory grid place-items-center font-semibold">DZ</div>
+        <div class="leading-tight">
+          <div class="font-serif text-lg">Dr. Zarqa’s Clinic</div>
+          <div class="text-xs text-black/60">Dermatology & Aesthetics • Lahore</div>
+        </div>
+      </a>
+
+      <button id="menuBtn" class="sm:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl border border-black/10">
+        <span class="sr-only">Open menu</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-80">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="hidden sm:flex items-center gap-6 text-sm">
+        <a class="hover:text-gold" href="#treatments">Treatments</a>
+        <a class="hover:text-gold" href="#results">Results</a>
+        <a class="hover:text-gold" href="#why">Why us</a>
+        <a class="hover:text-gold" href="#faq">FAQs</a>
+        <a class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-ink text-ivory hover:opacity-95 shadow-soft"
+           href="#book">Book Consultation</a>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="sm:hidden hidden border-t border-black/5 bg-ivory">
+      <div class="mx-auto max-w-7xl px-4 py-4 grid gap-3 text-sm">
+        <a class="py-2" href="#treatments">Treatments</a>
+        <a class="py-2" href="#results">Results</a>
+        <a class="py-2" href="#why">Why us</a>
+        <a class="py-2" href="#faq">FAQs</a>
+        <a class="py-3 text-center rounded-xl bg-ink text-ivory" href="#book">Book Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden grain">
+    <!-- “Video background” look -->
+    <div class="absolute inset-0">
+      <!-- Replace poster + src with your clinic reel/mp4 (hosted). If you don't have video, keep the gradient. -->
+      <video class="h-full w-full object-cover" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1556228578-5679dbf74d3a?auto=format&fit=crop&w=1800&q=70">
+        <source src="" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/55 to-ivory/95"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-16 sm:py-20">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-dark text-ivory text-xs border border-white/10">
+          <span class="h-1.5 w-1.5 rounded-full bg-gold"></span>
+          Dermatology • Aesthetics • Lasers
+        </div>
+
+        <h1 class="mt-6 font-serif text-4xl sm:text-6xl text-ivory leading-[1.05]">
+          Premium skin & aesthetic treatments — <span class="text-gold">done safely</span>, done properly.
+        </h1>
+
+        <p class="mt-5 text-ivory/85 text-base sm:text-lg">
+          Medical-grade results for pigmentation, acne scars, aging, texture, unwanted hair, and overall skin quality —
+          under experienced clinical supervision.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#book" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-gold text-ink font-medium shadow-glow hover:opacity-95">
+            Book Consultation
+          </a>
+          <a id="whatsHero" href="#" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl glass text-ink font-medium border border-black/10 hover:bg-white">
+            WhatsApp Booking
+          </a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="glass rounded-2xl p-4 border border-black/5 shadow-soft">
+            <div class="text-2xl font-semibold">30+ yrs</div>
+            <div class="text-xs text-black/60 mt-1">Clinical experience</div>
+          </div>
+          <div class="glass rounded-2xl p-4 border border-black/5 shadow-soft">
+            <div class="text-2xl font-semibold">USA/UK</div>
+            <div class="text-xs text-black/60 mt-1">Training background</div>
+          </div>
+          <div class="glass rounded-2xl p-4 border border-black/5 shadow-soft">
+            <div class="text-2xl font-semibold">2</div>
+            <div class="text-xs text-black/60 mt-1">Lahore branches</div>
+          </div>
+          <div class="glass rounded-2xl p-4 border border-black/5 shadow-soft">
+            <div class="text-2xl font-semibold">High</div>
+            <div class="text-xs text-black/60 mt-1">Client satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatments -->
+  <section id="treatments" class="mx-auto max-w-7xl px-4 py-16">
+    <div class="flex items-end justify-between gap-6">
+      <div>
+        <h2 class="font-serif text-3xl sm:text-4xl">Signature treatments</h2>
+        <p class="mt-2 text-black/60 max-w-2xl">Choose a goal. We’ll match the safest technology + technique for your skin.</p>
+      </div>
+      <a href="#book" class="hidden sm:inline-flex px-4 py-2 rounded-xl border border-black/10 hover:border-black/20">Get recommendations</a>
+    </div>
+
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Card template -->
+      <div class="reveal rounded-3xl bg-white p-6 border border-black/5 shadow-soft hover:shadow-glow transition">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-semibold text-lg">RF Microneedling</h3>
+            <p class="text-sm text-black/60 mt-1">Acne scars, pores, texture, tightening.</p>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-stone2 text-xs">Best-seller</span>
+        </div>
+        <ul class="mt-4 text-sm text-black/70 space-y-2">
+          <li>• Controlled collagen stimulation</li>
+          <li>• Scar depth + skin firmness</li>
+          <li>• Minimal downtime (case-dependent)</li>
+        </ul>
+      </div>
+
+      <div class="reveal rounded-3xl bg-white p-6 border border-black/5 shadow-soft hover:shadow-glow transition">
+        <h3 class="font-semibold text-lg">HydraFacial</h3>
+        <p class="text-sm text-black/60 mt-1">Instant glow, deep cleansing, hydration.</p>
+        <ul class="mt-4 text-sm text-black/70 space-y-2">
+          <li>• Event-ready finish</li>
+          <li>• Congestion + dullness</li>
+          <li>• Great for sensitive skin (plan-based)</li>
+        </ul>
+      </div>
+
+      <div class="reveal rounded-3xl bg-white p-6 border border-black/5 shadow-soft hover:shadow-glow transition">
+        <h3 class="font-semibold text-lg">Laser Hair Removal</h3>
+        <p class="text-sm text-black/60 mt-1">Reduced regrowth with safe settings.</p>
+        <ul class="mt-4 text-sm text-black/70 space-y-2">
+          <li>• Face & body</li>
+          <li>• Skin-type adjusted parameters</li>
+          <li>• Session plan for best outcomes</li>
+        </ul>
+      </div>
+
+      <div class="reveal rounded-3xl bg-white p-6 border border-black/5 shadow-soft hover:shadow-glow transition">
+        <h3 class="font-semibold text-lg">Botox® & Fillers</h3>
+        <p class="text-sm text-black/60 mt-1">Refined, natural-looking enhancements.</p>
+        <ul class="mt-4 text-sm text-black/70 space-y-2">
+          <li>• Expression lines</li>
+          <li>• Facial balancing</li>
+          <li>• Safety-led dosing & technique</li>
+        </ul>
+      </div>
+
+      <div class="reveal rounded-3xl bg-white p-6 border border-black/5 shadow-soft hover:shadow-glow transition">
+        <h3 class="font-semibold text-lg">PRP / Exosome Therapy</h3>
+        <p class="text-sm text-black/60 mt-1">Hair + skin quality support (case-based).</p>
+        <ul class="mt-4 text-sm text-black/70 space-y-2">
+          <li>• Hair thinning protocols</li>
+          <li>• Post-procedure recovery support</li>
+          <li>• Evidence-informed planning</li>
+        </ul>
+      </div>
+
+      <div class="reveal rounded-3xl bg-white p-6 border border-black/5 shadow-soft hover:shadow-glow transition">
+        <h3 class="font-semibold text-lg">Pigmentation Programs</h3>
+        <p class="text-sm text-black/60 mt-1">Melasma, sun spots, post-acne marks.</p>
+        <ul class="mt-4 text-sm text-black/70 space-y-2">
+          <li>• Peels + laser (when suitable)</li>
+          <li>• Maintenance to prevent rebound</li>
+          <li>• Homecare to protect results</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section id="why" class="bg-white border-y border-black/5">
+    <div class="mx-auto max-w-7xl px-4 py-16 grid lg:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <h2 class="font-serif text-3xl sm:text-4xl">Why clients choose us</h2>
+        <p class="mt-3 text-black/60">
+          Luxury feel is useless if outcomes are sloppy. We keep it clinical: assessment, safe parameters, and a plan that actually makes sense.
+        </p>
+
+        <div class="mt-8 grid gap-4">
+          <div class="rounded-2xl p-5 border border-black/5 bg-ivory">
+            <div class="font-semibold">Safety-first protocols</div>
+            <div class="text-sm text-black/60 mt-1">Skin type, history, and realistic expectations — before we touch a device.</div>
+          </div>
+          <div class="rounded-2xl p-5 border border-black/5 bg-ivory">
+            <div class="font-semibold">Technology + technique</div>
+            <div class="text-sm text-black/60 mt-1">Tools don’t create results. Correct settings + experienced hands do.</div>
+          </div>
+          <div class="rounded-2xl p-5 border border-black/5 bg-ivory">
+            <div class="font-semibold">Premium client experience</div>
+            <div class="text-sm text-black/60 mt-1">Guided flow, honest timelines, and transparent aftercare.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <!-- Replace with real clinic imagery -->
+        <div class="rounded-[2rem] overflow-hidden shadow-soft border border-black/5">
+          <img alt="Clinic interior" class="w-full h-[420px] object-cover"
+               src="https://images.unsplash.com/photo-1580281658223-9b93f18ae9ae?auto=format&fit=crop&w=1600&q=70" />
+        </div>
+        <p class="text-xs text-black/50 mt-3">Replace this image with your Gulberg/DHA clinic shot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results / Before After -->
+  <section id="results" class="mx-auto max-w-7xl px-4 py-16">
+    <div class="flex items-end justify-between gap-6">
+      <div>
+        <h2 class="font-serif text-3xl sm:text-4xl">Results you can see</h2>
+        <p class="mt-2 text-black/60 max-w-2xl">Add your real before/after images here (with consent). This section converts like crazy.</p>
+      </div>
+    </div>
+
+    <!-- Before/After slider (single) -->
+    <div class="mt-8 rounded-[2rem] overflow-hidden border border-black/5 shadow-soft bg-white">
+      <div class="relative h-[420px]">
+        <img id="beforeImg" class="absolute inset-0 w-full h-full object-cover"
+             src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1600&q=70" alt="Before" />
+        <div id="afterWrap" class="absolute inset-0 overflow-hidden" style="width:50%">
+          <img id="afterImg" class="absolute inset-0 w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=1600&q=70" alt="After" />
+        </div>
+        <div class="absolute left-4 top-4 px-3 py-1 rounded-full glass text-xs border border-black/10">Before</div>
+        <div class="absolute right-4 top-4 px-3 py-1 rounded-full glass text-xs border border-black/10">After</div>
+
+        <div class="absolute left-0 right-0 bottom-0 p-5 bg-gradient-to-t from-ink/35 to-transparent">
+          <input id="baRange" type="range" min="10" max="90" value="50" class="w-full accent-gold">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="book" class="bg-ink text-ivory">
+    <div class="mx-auto max-w-7xl px-4 py-16 grid lg:grid-cols-2 gap-10 items-start">
+      <div class="reveal">
+        <h2 class="font-serif text-3xl sm:text-4xl">Book your consultation</h2>
+        <p class="mt-3 text-ivory/75">
+          Tell us your concern + preferred branch/time. We’ll confirm the slot on WhatsApp.
+        </p>
+
+        <div class="mt-8 rounded-3xl border border-white/10 p-6 glass-dark">
+          <div class="font-semibold">What we’ll ask (so we don’t waste your time)</div>
+          <ul class="mt-3 text-sm text-ivory/75 space-y-2">
+            <li>• Your main concern (pigmentation/acne/scars/hair/aging)</li>
+            <li>• Duration + any prior treatments</li>
+            <li>• Preferred branch + day/time</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <form id="bookingForm" class="rounded-[2rem] bg-ivory text-ink p-6 sm:p-8 shadow-glow">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm text-black/70">Full name</label>
+              <input required name="name" class="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 outline-none focus:ring-2 focus:ring-gold"
+                     placeholder="e.g., Ayesha" />
+            </div>
+            <div>
+              <label class="text-sm text-black/70">Phone / WhatsApp</label>
+              <input required name="phone" class="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 outline-none focus:ring-2 focus:ring-gold"
+                     placeholder="03xx xxxxxxx" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="text-sm text-black/70">Concern</label>
+              <input required name="concern" class="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 outline-none focus:ring-2 focus:ring-gold"
+                     placeholder="Pigmentation / Acne / Scars / Hair / Anti-aging" />
+            </div>
+            <div>
+              <label class="text-sm text-black/70">Preferred branch</label>
+              <select name="branch" class="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 outline-none focus:ring-2 focus:ring-gold">
+                <option>Gulberg</option>
+                <option>DHA Phase 4</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm text-black/70">Preferred day/time</label>
+              <input name="time" class="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 outline-none focus:ring-2 focus:ring-gold"
+                     placeholder="e.g., Saturday 5pm" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="text-sm text-black/70">Notes (optional)</label>
+              <textarea name="notes" rows="3" class="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 outline-none focus:ring-2 focus:ring-gold"
+                        placeholder="Any allergies / pregnancy / medications / previous procedures?"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="mt-5 w-full rounded-2xl bg-ink text-ivory py-3 font-medium hover:opacity-95">
+            Send on WhatsApp
+          </button>
+
+          <p class="mt-3 text-xs text-black/50">
+            By submitting, you agree to be contacted for appointment confirmation.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section id="locations" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="font-serif text-3xl sm:text-4xl">Our locations</h2>
+    <p class="mt-2 text-black/60">Choose the branch that’s convenient. We’ll guide you on WhatsApp.</p>
+
+    <div class="mt-8 grid lg:grid-cols-2 gap-6">
+      <div class="reveal rounded-[2rem] bg-white p-6 border border-black/5 shadow-soft">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <div class="text-xs tracking-widest text-black/50">GULBERG</div>
+            <div class="text-xl font-semibold mt-1">Dr. Zarqa’s Clinic — Gulberg</div>
+            <div class="text-sm text-black/60 mt-2">71-F Main Boulevard, Above Zoro Burger, Opposite Cue Cinema, Gulberg II, Lahore.</div>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-stone2 text-xs">Main</span>
+        </div>
+
+        <div class="mt-4 rounded-2xl overflow-hidden border border-black/5">
+          <iframe title="Gulberg Map" class="w-full h-64"
+            src="https://www.google.com/maps?q=71-F%20Main%20Boulevard%2C%20Gulberg%20II%2C%20Lahore&output=embed"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="reveal rounded-[2rem] bg-white p-6 border border-black/5 shadow-soft">
+        <div class="text-xs tracking-widest text-black/50">DHA PHASE 4</div>
+        <div class="text-xl font-semibold mt-1">Dr. Zarqa’s Clinic — DHA Phase 4</div>
+        <div class="text-sm text-black/60 mt-2">Address: (add your exact DHA address here)</div>
+
+        <div class="mt-4 rounded-2xl overflow-hidden border border-black/5 bg-ivory h-64 grid place-items-center text-sm text-black/50">
+          Add DHA Google Map embed here
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="bg-white border-t border-black/5">
+    <div class="mx-auto max-w-7xl px-4 py-16">
+      <h2 class="font-serif text-3xl sm:text-4xl">FAQs</h2>
+      <div class="mt-8 grid gap-3">
+        <div class="faq-item rounded-2xl border border-black/10 bg-ivory p-5">
+          <button class="faq-btn w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-semibold">How many sessions will I need?</span>
+            <span class="faq-icon text-black/60">+</span>
+          </button>
+          <div class="faq-body hidden mt-3 text-sm text-black/70">
+            It depends on your concern, skin type, and history. We’ll give you a realistic plan (and timeline) after assessment.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-2xl border border-black/10 bg-ivory p-5">
+          <button class="faq-btn w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-semibold">Is there downtime?</span>
+            <span class="faq-icon text-black/60">+</span>
+          </button>
+          <div class="faq-body hidden mt-3 text-sm text-black/70">
+            Some treatments have zero downtime, others can involve redness/flaking. We’ll recommend the safest option for your schedule.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-2xl border border-black/10 bg-ivory p-5">
+          <button class="faq-btn w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-semibold">Can I book on WhatsApp?</span>
+            <span class="faq-icon text-black/60">+</span>
+          </button>
+          <div class="faq-body hidden mt-3 text-sm text-black/70">
+            Yes. Use the form above or tap the WhatsApp button. We’ll confirm your slot and guide you.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-ink text-ivory">
+    <div class="mx-auto max-w-7xl px-4 py-10">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+        <div>
+          <div class="font-serif text-xl">Dr. Zarqa’s Aesthetic Skin Clinic</div>
+          <div class="text-sm text-ivory/70 mt-2">Luxury dermatology & aesthetics • Lahore</div>
+        </div>
+        <div class="flex gap-3">
+          <a id="whatsFooter" href="#" class="px-4 py-2 rounded-xl bg-gold text-ink font-medium hover:opacity-95">WhatsApp</a>
+          <a href="#book" class="px-4 py-2 rounded-xl border border-white/15 hover:border-white/30">Book</a>
+        </div>
+      </div>
+
+      <div class="mt-8 text-xs text-ivory/60">
+        Disclaimer: Results vary by individual. All treatments are performed after assessment and suitability check.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a id="whatsFloat" href="#" class="fixed bottom-5 right-5 z-50 rounded-full bg-gold text-ink shadow-glow h-14 w-14 grid place-items-center hover:opacity-95">
+    <span class="sr-only">WhatsApp</span>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <path d="M12 21a9 9 0 1 0-7.85-4.6L3 21l4.77-1.1A8.96 8.96 0 0 0 12 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M9.2 9.2c.3-.6.6-.6.9-.6h.7c.2 0 .4.1.5.3l.7 1.7c.1.2 0 .5-.2.6l-.6.5c.6 1.1 1.5 2 2.6 2.6l.5-.6c.2-.2.4-.3.6-.2l1.7.7c.2.1.3.3.3.5v.7c0 .3 0 .6-.6.9-.6.3-1.9.7-4-.5-2.1-1.2-3.9-3-5-5.1-1.2-2.1-.8-3.4-.5-4Z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <script>
+    // ====== CONFIG (change these) ======
+    const WHATSAPP_NUMBER_E164 = "923001234567"; // <-- replace: e.g., 923001112233 (Pakistan format)
+    const CLINIC_NAME = "Dr. Zarqa’s Aesthetic Skin Clinic";
+    // ================================
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    // Smooth scroll for internal anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        mobileMenu?.classList.add('hidden');
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('is-in');
+      })
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Before/After slider
+    const baRange = document.getElementById('baRange');
+    const afterWrap = document.getElementById('afterWrap');
+    if (baRange && afterWrap) {
+      baRange.addEventListener('input', () => afterWrap.style.width = `${baRange.value}%`);
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const btn = item.querySelector('.faq-btn');
+      const body = item.querySelector('.faq-body');
+      const icon = item.querySelector('.faq-icon');
+      btn.addEventListener('click', () => {
+        const isOpen = !body.classList.contains('hidden');
+        document.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+        if (!isOpen) { body.classList.remove('hidden'); icon.textContent = '–'; }
+      });
+    });
+
+    // WhatsApp helpers
+    function waLink(message) {
+      const text = encodeURIComponent(message);
+      return `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${text}`;
+    }
+
+    const defaultMsg = `Hi ${CLINIC_NAME}, I want to book a consultation.`;
+    const hero = document.getElementById('whatsHero');
+    const footer = document.getElementById('whatsFooter');
+    const floatBtn = document.getElementById('whatsFloat');
+
+    [hero, footer, floatBtn].forEach(el => {
+      if (el) el.href = waLink(defaultMsg);
+    });
+
+    // Booking form -> WhatsApp prefilled message
+    const form = document.getElementById('bookingForm');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const msg =
+`Hi ${CLINIC_NAME},
+Name: ${data.get('name')}
+Phone: ${data.get('phone')}
+Concern: ${data.get('concern')}
+Branch: ${data.get('branch')}
+Preferred time: ${data.get('time') || '-'}
+Notes: ${data.get('notes') || '-'}
+
+Please confirm an appointment slot.`;
+      window.open(waLink(msg), '_blank');
+    });
+  </script>
+</body>
+</html>
