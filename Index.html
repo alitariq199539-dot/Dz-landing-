@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dr. Zarqa’s Aesthetic Skin Clinic — Lahore</title>
+  <meta name="description" content="Premium dermatology & aesthetic treatments in Lahore. Botox, fillers, lasers, RF microneedling, PRP, exosomes, HydraFacial & more." />
+  <meta property="og:title" content="Dr. Zarqa’s Aesthetic Skin Clinic — Lahore" />
+  <meta property="og:description" content="Luxury, safety-first, results-driven dermatology & aesthetics." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#07080c;
+      --fg:#f6f2ea;
+      --muted:rgba(246,242,234,.70);
+      --muted2:rgba(246,242,234,.55);
+      --line:rgba(246,242,234,.10);
+      --gold:#bfa36a;
+      --card:rgba(255,255,255,.06);
+      --glass:rgba(255,255,255,.08);
+      --shadow: 0 18px 70px rgba(0,0,0,.55);
+      --radius: 28px;
+      --max: 1180px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+    button, input, select, textarea{font:inherit}
+    .serif{font-family:"Playfair Display", ui-serif, Georgia, serif}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px;}
+    .row{display:flex; gap:16px; align-items:center}
+    .muted{color:var(--muted)}
+    .muted2{color:var(--muted2)}
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.25);
+      backdrop-filter: blur(10px);
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .dot{width:7px;height:7px;border-radius:999px;background:var(--gold);box-shadow:0 0 0 4px rgba(191,163,106,.15)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:14px 18px; border-radius:16px;
+      border:1px solid var(--line);
+      background:var(--glass);
+      backdrop-filter: blur(12px);
+      transition:transform .2s ease, border-color .2s ease, background .2s ease;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{transform:translateY(-1px); border-color:rgba(191,163,106,.35); background:rgba(255,255,255,.10)}
+    .btn.primary{background:var(--gold); color:#0b0b10; border-color:transparent; box-shadow: 0 18px 55px rgba(191,163,106,.18)}
+    .btn.primary:hover{background:#d4b57a}
+    .btn.small{padding:10px 14px; border-radius:14px; font-size:14px}
+    .kbd{
+      font-size:12px; padding:6px 10px; border-radius:12px;
+      background:rgba(255,255,255,.08); border:1px solid var(--line);
+    }
+
+    /* ===== HERO ===== */
+    .hero{
+      position:relative;
+      min-height:100svh;
+      display:flex;
+      align-items:flex-end;
+      padding:26px 0 26px;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
+    }
+    .heroMedia{
+      position:absolute; inset:0;
+      z-index:0;
+      background:
+        radial-gradient(1200px 700px at 20% 0%, rgba(191,163,106,.25), transparent 60%),
+        radial-gradient(900px 600px at 80% 10%, rgba(255,255,255,.10), transparent 60%),
+        linear-gradient(to bottom, rgba(0,0,0,.60), rgba(0,0,0,.70));
+    }
+    .heroMedia video, .heroMedia img{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:cover;
+      filter:saturate(1.05) contrast(1.05) brightness(.85);
+      transform:scale(1.02);
+    }
+    .heroMedia:after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.72) 65%, rgba(7,8,12,1));
+    }
+    .grain:before{
+      content:"";
+      position:absolute; inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+      pointer-events:none;
+      mix-blend-mode:overlay;
+      z-index:1;
+    }
+
+    .heroTop{
+      position:absolute; left:0; right:0; top:0;
+      z-index:3;
+      padding:18px 0;
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+    }
+    .logo{
+      width:44px; height:44px;
+      border-radius:999px;
+      display:grid; place-items:center;
+      background:rgba(255,255,255,.08);
+      border:1px solid var(--line);
+      backdrop-filter: blur(12px);
+      font-weight:700;
+      letter-spacing:.06em;
+    }
+    .navLinks{
+      display:flex; gap:18px; align-items:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .navLinks a{padding:10px 10px; border-radius:14px; transition: background .2s ease, color .2s ease}
+    .navLinks a:hover{background:rgba(255,255,255,.06); color:var(--fg)}
+    .navRight{display:flex; gap:10px; align-items:center}
+
+    .heroInner{
+      position:relative;
+      z-index:2;
+      width:100%;
+      padding-top:110px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:end;
+    }
+    .heroH{
+      margin:16px 0 0;
+      font-size: clamp(42px, 5.4vw, 82px);
+      line-height: .98;
+      letter-spacing: -0.02em;
+    }
+    .heroH .gold{color:var(--gold)}
+    .heroP{
+      margin:16px 0 0;
+      font-size:18px;
+      line-height:1.6;
+      color:var(--muted);
+      max-width: 52ch;
+    }
+    .heroCTAs{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+    .heroCard{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .stats{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .stat{
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.25);
+      padding:14px;
+    }
+    .stat b{display:block; font-size:22px}
+    .stat span{display:block; font-size:12px; color:var(--muted2); margin-top:6px}
+
+    /* Click-to-enable-audio overlay */
+    .audioGate{
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:22px;
+      background:rgba(0,0,0,.70);
+      backdrop-filter: blur(10px);
+      opacity:1;
+      transition:opacity .25s ease;
+    }
+    .audioGate.hidden{opacity:0; pointer-events:none}
+    .audioBox{
+      width:min(560px, 92vw);
+      border-radius: 26px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .audioBox h3{margin:0 0 8px; font-size:18px}
+    .audioBox p{margin:0 0 14px; color:var(--muted); line-height:1.6}
+    .audioBox .row{justify-content:space-between; flex-wrap:wrap}
+
+    /* Portrait nudge like Organimo */
+    .rotateNudge{
+      display:none;
+      position:fixed; inset:0;
+      z-index:9998;
+      background:rgba(0,0,0,.85);
+      backdrop-filter: blur(10px);
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:22px;
+    }
+    .rotateNudge .card{
+      width:min(560px, 92vw);
+      border-radius:26px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      padding:20px;
+    }
+
+    /* ===== SECTIONS ===== */
+    section{padding:86px 0}
+    .sectionTop{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:18px;
+      margin-bottom: 24px;
+    }
+    .h2{
+      margin:0;
+      font-size: clamp(26px, 3.2vw, 44px);
+      letter-spacing: -0.02em;
+      line-height:1.05;
+    }
+    .sub{
+      margin:10px 0 0;
+      color:var(--muted);
+      line-height:1.6;
+      max-width: 70ch;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    .card{
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 16px 60px rgba(0,0,0,.40);
+      padding:18px;
+      backdrop-filter: blur(14px);
+    }
+    .card h4{margin:0; font-size:16px}
+    .card p{margin:10px 0 0; color:var(--muted); line-height:1.6; font-size:14px}
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .tag .miniDot{width:6px; height:6px; border-radius:99px; background:var(--gold)}
+
+    /* ===== MARQUEE ===== */
+    .marqueeWrap{
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      overflow:hidden;
+    }
+    .marquee{
+      display:flex;
+      gap:22px;
+      padding:16px 0;
+      width:max-content;
+      animation: marquee 28s linear infinite;
+    }
+    .marquee:hover{animation-play-state:paused}
+    @keyframes marquee{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)}
+    }
+
+    /* ===== Treatments (horizontal scroll like “journey”) ===== */
+    .hscroll{
+      display:flex;
+      gap:14px;
+      overflow:auto;
+      padding-bottom:6px;
+      scroll-snap-type:x mandatory;
+    }
+    .hscroll::-webkit-scrollbar{height:10px}
+    .hscroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.10); border-radius:999px}
+    .tile{
+      min-width: 320px;
+      scroll-snap-align:start;
+      border-radius: 26px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      padding:18px;
+    }
+    .tileTop{display:flex; align-items:flex-start; justify-content:space-between; gap:12px}
+    .tile h4{margin:0; font-size:16px}
+    .tile p{margin:10px 0 0; color:var(--muted); line-height:1.6; font-size:14px}
+    .tile ul{margin:12px 0 0; padding-left: 18px; color:var(--muted); font-size:14px; line-height:1.7}
+
+    /* ===== Accordion (Organimo-style benefits list) ===== */
+    .acc{display:flex; flex-direction:column; gap:12px}
+    .accItem{
+      border-radius: 26px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      overflow:hidden;
+    }
+    .accBtn{
+      width:100%;
+      text-align:left;
+      padding:16px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      background:transparent;
+      border:0;
+      color:var(--fg);
+      cursor:pointer;
+    }
+    .accBtn b{font-size:16px}
+    .accBtn span{color:var(--muted); font-size:13px}
+    .accBody{
+      display:none;
+      padding:0 18px 16px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+    .accItem.open .accBody{display:block}
+    .accIcon{
+      width:36px; height:36px; border-radius:14px;
+      display:grid; place-items:center;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color:var(--muted);
+      flex:0 0 auto;
+    }
+
+    /* ===== Before/After slider ===== */
+    .ba{
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      overflow:hidden;
+      background:rgba(255,255,255,.05);
+      box-shadow: 0 16px 65px rgba(0,0,0,.45);
+    }
+    .baStage{
+      position:relative;
+      height: 420px;
+    }
+    .baStage img{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:cover;
+      filter:saturate(1.05) contrast(1.03);
+    }
+    .baAfter{
+      position:absolute; inset:0;
+      overflow:hidden;
+      width:50%;
+    }
+    .baLabel{
+      position:absolute; top:16px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.28);
+      backdrop-filter: blur(10px);
+      font-size:12px;
+      color:var(--muted);
+    }
+    .baLabel.left{left:16px}
+    .baLabel.right{right:16px}
+    .baControls{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      padding:16px;
+      background: rgba(0,0,0,.20);
+      border-top:1px solid var(--line);
+    }
+    input[type="range"]{width:100%}
+    input[type="range"]{accent-color: var(--gold)}
+
+    /* ===== Booking ===== */
+    .form{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .field{display:flex; flex-direction:column; gap:8px}
+    .field label{font-size:13px; color:var(--muted)}
+    .field input, .field select, .field textarea{
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      outline:none;
+      background: rgba(0,0,0,.20);
+      color:var(--fg);
+    }
+    .field textarea{min-height: 96px; resize:vertical}
+    .field input:focus, .field select:focus, .field textarea:focus{
+      border-color: rgba(191,163,106,.35);
+      box-shadow: 0 0 0 4px rgba(191,163,106,.10);
+    }
+
+    /* ===== Footer ===== */
+    footer{
+      padding:40px 0;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+    }
+
+    /* ===== Floating WhatsApp ===== */
+    .floatWA{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:1000;
+      width:56px;height:56px;
+      border-radius:999px;
+      background: var(--gold);
+      color:#0b0b10;
+      display:grid; place-items:center;
+      box-shadow: 0 18px 55px rgba(191,163,106,.22);
+      transition: transform .2s ease, filter .2s ease;
+    }
+    .floatWA:hover{transform:translateY(-2px); filter:brightness(1.04)}
+    .floatWA svg{width:22px;height:22px}
+
+    /* Reveal */
+    .reveal{opacity:0; transform: translateY(14px); transition: opacity .9s ease, transform .9s ease}
+    .reveal.in{opacity:1; transform: translateY(0)}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns: 1fr; gap:14px}
+      .stats{grid-template-columns: 1fr 1fr}
+      .grid3{grid-template-columns: 1fr}
+      .grid2{grid-template-columns: 1fr}
+      .navLinks{display:none}
+    }
+    @media (max-width: 520px){
+      section{padding:72px 0}
+      .heroP{font-size:16px}
+      .form{grid-template-columns: 1fr}
+      .stats{grid-template-columns: 1fr 1fr}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- “Rotate to portrait” nudge -->
+  <div id="rotateNudge" class="rotateNudge">
+    <div class="card">
+      <div class="pill" style="margin-bottom:12px"><span class="dot"></span>Best experience</div>
+      <h3 class="serif" style="margin:0 0 8px">Please rotate your device to portrait</h3>
+      <p class="muted" style="margin:0; line-height:1.6">This landing page is designed for a premium vertical scroll experience.</p>
+    </div>
+  </div>
+
+  <!-- Click-to-enable-audio overlay (optional but matches Organimo vibe) -->
+  <div id="audioGate" class="audioGate">
+    <div class="audioBox">
+      <div class="pill"><span class="dot"></span>Click anywhere to enable audio</div>
+      <h3 class="serif" style="margin-top:14px">A calm, premium experience</h3>
+      <p>We use subtle ambience (optional). You can mute anytime.</p>
+      <div class="row">
+        <button id="enableAudioBtn" class="btn primary">Enable Audio</button>
+        <button id="skipAudioBtn" class="btn">Continue Without Audio</button>
+      </div>
+      <div style="margin-top:12px" class="muted2">Tip: Press <span class="kbd">M</span> to mute/unmute.</div>
+    </div>
+  </div>
+
+  <!-- Hidden audio (replace src if you want) -->
+  <audio id="bgAudio" loop preload="none">
+    <!-- Optional: add your own mp3 URL here -->
+    <source src="" type="audio/mpeg">
+  </audio>
+
+  <!-- HERO -->
+  <header class="hero grain" id="top">
+    <div class="heroMedia">
+      <!-- Replace with your actual clinic hero video or image -->
+      <!-- Option A: video (recommended) -->
+      <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1580281658223-9b93f18ae9ae?auto=format&fit=crop&w=2400&q=70">
+        <source src="" type="video/mp4" />
+      </video>
+      <!-- Option B: image (if no video). Just comment video above and use image below -->
+      <!-- <img src="https://images.unsplash.com/photo-1580281658223-9b93f18ae9ae?auto=format&fit=crop&w=2400&q=70" alt=""> -->
+    </div>
+
+    <div class="heroTop">
+      <div class="container">
+        <div class="nav">
+          <div class="brand">
+            <div class="logo">DZ</div>
+            <div>
+              <div class="serif" style="font-size:16px; letter-spacing:-.01em;">Dr. Zarqa’s Clinic</div>
+              <div class="muted2" style="font-size:12px; margin-top:2px;">Dermatology & Aesthetics • Lahore</div>
+            </div>
+          </div>
+
+          <div class="navLinks">
+            <a href="#treatments">Treatments</a>
+            <a href="#results">Results</a>
+            <a href="#why">Why us</a>
+            <a href="#book">Book</a>
+            <a href="#locations">Locations</a>
+          </div>
+
+          <div class="navRight">
+            <a class="btn small" href="#book">Book Consultation</a>
+            <a class="btn small primary" id="navWhatsApp" href="#">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container heroInner">
+      <div class="heroGrid">
+        <div>
+          <div class="pill"><span class="dot"></span>Science-backed • Luxury • Safety-first</div>
+          <h1 class="heroH serif">
+            From skin<br/>
+            to <span class="gold">confidence</span><br/>
+            begins here.
+          </h1>
+          <p class="heroP">
+            Premium dermatology and aesthetic treatments in Lahore — designed for real concerns like pigmentation,
+            acne scars, aging, and unwanted hair — with clinical precision and honest timelines.
+          </p>
+
+          <div class="heroCTAs">
+            <a class="btn primary" href="#book">Book Appointment</a>
+            <a class="btn" id="heroWhatsApp" href="#">WhatsApp Booking</a>
+            <a class="btn" href="#treatments">Start the journey ↓</a>
+          </div>
+        </div>
+
+        <div class="heroCard">
+          <div class="row" style="justify-content:space-between">
+            <div class="tag"><span class="miniDot"></span>Trusted expertise</div>
+            <div class="muted2" style="font-size:12px">Two branches</div>
+          </div>
+
+          <div class="stats" style="margin-top:12px">
+            <div class="stat">
+              <b>30+ yrs</b>
+              <span>Clinical experience</span>
+            </div>
+            <div class="stat">
+              <b>USA/UK</b>
+              <span>Training exposure</span>
+            </div>
+            <div class="stat">
+              <b>Premium</b>
+              <span>Clinic environment</span>
+            </div>
+            <div class="stat">
+              <b>Results</b>
+              <span>Plan-based treatments</span>
+            </div>
+          </div>
+
+          <div style="margin-top:14px; border-top:1px solid var(--line); padding-top:14px">
+            <div class="muted2" style="font-size:12px; letter-spacing:.08em; text-transform:uppercase;">Quick booking</div>
+            <div style="margin-top:10px" class="row">
+              <span class="muted" style="font-size:14px">Tap WhatsApp. Tell us your concern + preferred day/time.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MARQUEE (like Organimo badges loop) -->
+  <div class="marqueeWrap">
+    <div class="container" style="overflow:hidden;">
+      <div class="marquee" aria-label="Highlights marquee">
+        <span class="tag"><span class="miniDot"></span>Botox® • Fillers • Threads</span>
+        <span class="tag"><span class="miniDot"></span>RF Microneedling</span>
+        <span class="tag"><span class="miniDot"></span>PRP • Exosomes</span>
+        <span class="tag"><span class="miniDot"></span>HydraFacial</span>
+        <span class="tag"><span class="miniDot"></span>Laser Hair Removal</span>
+        <span class="tag"><span class="miniDot"></span>Pigmentation Programs</span>
+        <span class="tag"><span class="miniDot"></span>Acne & Scar Plans</span>
+
+        <!-- Duplicate for seamless loop -->
+        <span class="tag"><span class="miniDot"></span>Botox® • Fillers • Threads</span>
+        <span class="tag"><span class="miniDot"></span>RF Microneedling</span>
+        <span class="tag"><span class="miniDot"></span>PRP • Exosomes</span>
+        <span class="tag"><span class="miniDot"></span>HydraFacial</span>
+        <span class="tag"><span class="miniDot"></span>Laser Hair Removal</span>
+        <span class="tag"><span class="miniDot"></span>Pigmentation Programs</span>
+        <span class="tag"><span class="miniDot"></span>Acne & Scar Plans</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TREATMENTS “Journey” -->
+  <section id="treatments">
+    <div class="container">
+      <div class="sectionTop">
+        <div>
+          <h2 class="h2 serif">Signature treatments</h2>
+          <p class="sub">Choose a goal. We match the safest technology + technique for your skin type and history.</p>
+        </div>
+        <a class="btn small" href="#book">Get a plan</a>
+      </div>
+
+      <div class="hscroll reveal">
+        <article class="tile">
+          <div class="tileTop">
+            <div>
+              <h4>RF Microneedling</h4>
+              <div class="muted2" style="margin-top:6px;font-size:13px">Acne scars • pores • texture • tightening</div>
+            </div>
+            <span class="tag"><span class="miniDot"></span>Top pick</span>
+          </div>
+          <ul>
+            <li>Controlled collagen stimulation</li>
+            <li>Visible texture refinement</li>
+            <li>Downtime depends on plan</li>
+          </ul>
+        </article>
+
+        <article class="tile">
+          <div class="tileTop">
+            <div>
+              <h4>HydraFacial</h4>
+              <div class="muted2" style="margin-top:6px;font-size:13px">Instant glow • hydration • deep cleanse</div>
+            </div>
+            <span class="tag"><span class="miniDot"></span>Event-ready</span>
+          </div>
+          <ul>
+            <li>Decongests & hydrates</li>
+            <li>Improves dullness fast</li>
+            <li>Great maintenance option</li>
+          </ul>
+        </article>
+
+        <article class="tile">
+          <div class="tileTop">
+            <div>
+              <h4>Laser Hair Removal</h4>
+              <div class="muted2" style="margin-top:6px;font-size:13px">Face & body • safe settings</div>
+            </div>
+            <span class="tag"><span class="miniDot"></span>Popular</span>
+          </div>
+          <ul>
+            <li>Skin-type adjusted parameters</li>
+            <li>Session plan for best results</li>
+            <li>Aftercare guided</li>
+          </ul>
+        </article>
+
+        <article class="tile">
+          <div class="tileTop">
+            <div>
+              <h4>Botox® & Fillers</h4>
+              <div class="muted2" style="margin-top:6px;font-size:13px">Natural-looking refinement</div>
+            </div>
+            <span class="tag"><span class="miniDot"></span>Doctor-led</span>
+          </div>
+          <ul>
+            <li>Expression lines & balancing</li>
+            <li>Safety-first dosing</li>
+            <li>Subtle, premium finish</li>
+          </ul>
+        </article>
+
+        <article class="tile">
+          <div class="tileTop">
+            <div>
+              <h4>PRP / Exosome Therapy</h4>
+              <div class="muted2" style="margin-top:6px;font-size:13px">Hair thinning • recovery support</div>
+            </div>
+            <span class="tag"><span class="miniDot"></span>Advanced</span>
+          </div>
+          <ul>
+            <li>Case-based protocols</li>
+            <li>Evidence-informed planning</li>
+            <li>Combine with homecare if needed</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why">
+    <div class="container">
+      <div class="sectionTop">
+        <div>
+          <h2 class="h2 serif">Why this clinic works</h2>
+          <p class="sub">Luxury is easy. Consistent outcomes require proper assessment, correct settings, and disciplined aftercare.</p>
+        </div>
+      </div>
+
+      <div class="grid3 reveal">
+        <div class="card">
+          <h4>Safety-first protocols</h4>
+          <p>We check skin type, history, and realistic targets first — then choose the safest route to results.</p>
+        </div>
+        <div class="card">
+          <h4>Technology + technique</h4>
+          <p>Devices don’t create results by themselves. Correct parameters + experienced hands do.</p>
+        </div>
+        <div class="card">
+          <h4>Premium client experience</h4>
+          <p>Guided flow, honest timelines, and transparent aftercare — no drama, no vague promises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS ACCORDION (Organimo-style) -->
+  <section id="benefits">
+    <div class="container">
+      <div class="sectionTop">
+        <div>
+          <h2 class="h2 serif">A better you starts here</h2>
+          <p class="sub">Tap a concern. This is how we typically approach it — clinically and safely.</p>
+        </div>
+        <a class="btn small primary" href="#book">Book now</a>
+      </div>
+
+      <div class="grid2 reveal">
+        <div class="acc">
+          <div class="accItem open">
+            <button class="accBtn" type="button">
+              <div>
+                <b>Pigmentation & Melasma</b><br/>
+                <span>Peels • lasers • maintenance</span>
+              </div>
+              <div class="accIcon">+</div>
+            </button>
+            <div class="accBody">
+              We start with assessment (triggers + skin barrier), then build a plan using controlled brightening, safe energy-based options (when suitable),
+              and strict maintenance to prevent rebound.
+            </div>
+          </div>
+
+          <div class="accItem">
+            <button class="accBtn" type="button">
+              <div>
+                <b>Acne Scars & Texture</b><br/>
+                <span>RF microneedling • resurfacing</span>
+              </div>
+              <div class="accIcon">+</div>
+            </button>
+            <div class="accBody">
+              Scar work is staged. We combine collagen stimulation with barrier support and realistic session spacing.
+              The goal is smoother texture without irritating the skin into more pigmentation.
+            </div>
+          </div>
+
+          <div class="accItem">
+            <button class="accBtn" type="button">
+              <div>
+                <b>Anti-aging & Tightening</b><br/>
+                <span>Botox® • fillers • threads • devices</span>
+              </div>
+              <div class="accIcon">+</div>
+            </button>
+            <div class="accBody">
+              We focus on natural-looking refinement: soften expression lines, support structure, and improve skin quality.
+              No “overdone” faces.
+            </div>
+          </div>
+
+          <div class="accItem">
+            <button class="accBtn" type="button">
+              <div>
+                <b>Hair Thinning</b><br/>
+                <span>PRP • exosomes • scalp protocols</span>
+              </div>
+              <div class="accIcon">+</div>
+            </button>
+            <div class="accBody">
+              We plan around the cause (pattern thinning, shedding, nutrition, hormones). Then apply targeted regenerative protocols
+              and track progress properly over weeks/months.
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="padding:20px">
+          <div class="pill"><span class="dot"></span>What we don’t do</div>
+          <h3 class="serif" style="margin:14px 0 0; font-size:26px; letter-spacing:-.02em;">No fake promises.</h3>
+          <p class="muted" style="margin:10px 0 0; line-height:1.7">
+            If a “one session miracle” is what someone wants, they’re at the wrong place.
+            We do plans that make sense, then we deliver.
+          </p>
+          <div style="margin-top:16px; border-top:1px solid var(--line); padding-top:16px">
+            <div class="muted2" style="font-size:12px; letter-spacing:.08em; text-transform:uppercase;">Fast booking</div>
+            <div style="margin-top:10px" class="row">
+              <span class="muted" style="font-size:14px">WhatsApp us your concern + preferred day/time.</span>
+            </div>
+            <div style="margin-top:12px" class="row">
+              <a class="btn primary" id="benefitsWhatsApp" href="#">WhatsApp</a>
+              <a class="btn" href="#book">Use booking form</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS (Before/After slider demo) -->
+  <section id="results">
+    <div class="container">
+      <div class="sectionTop">
+        <div>
+          <h2 class="h2 serif">Results you can see</h2>
+          <p class="sub">Replace these demo images with your real before/after (with consent). This section is a conversion weapon.</p>
+        </div>
+      </div>
+
+      <div class="ba reveal">
+        <div class="baStage">
+          <!-- Replace with your own images -->
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=2400&q=70" alt="Before" />
+          <div class="baAfter" id="baAfter">
+            <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=2400&q=70" alt="After" />
+          </div>
+          <div class="baLabel left">Before</div>
+          <div class="baLabel right">After</div>
+        </div>
+        <div class="baControls">
+          <span class="muted2" style="font-size:12px; min-width:98px">Slide</span>
+          <input id="baRange" type="range" min="10" max="90" value="50" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="book">
+    <div class="container">
+      <div class="sectionTop">
+        <div>
+          <h2 class="h2 serif">Book your consultation</h2>
+          <p class="sub">Fill this once. It sends a clean WhatsApp booking message to your team.</p>
+        </div>
+      </div>
+
+      <div class="grid2 reveal">
+        <div class="card">
+          <div class="pill"><span class="dot"></span>What we’ll ask</div>
+          <p style="margin-top:14px" class="muted">
+            We keep it simple so your appointment is productive:
+          </p>
+          <ul class="muted" style="line-height:1.9; margin:10px 0 0; padding-left: 18px">
+            <li>Your main concern (pigmentation/acne/scars/hair/anti-aging)</li>
+            <li>Duration + any past treatments</li>
+            <li>Preferred branch + day/time</li>
+          </ul>
+          <div style="margin-top:14px" class="row">
+            <a class="btn primary" id="bookWhatsAppA" href="#">WhatsApp booking</a>
+            <a class="btn" href="#locations">See locations</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <form id="bookingForm" class="form">
+            <div class="field">
+              <label>Full name</label>
+              <input required name="name" placeholder="e.g., Ayesha" />
+            </div>
+            <div class="field">
+              <label>WhatsApp number</label>
+              <input required name="phone" placeholder="03xx xxxxxxx" />
+            </div>
+
+            <div class="field" style="grid-column:1 / -1">
+              <label>Main concern</label>
+              <input required name="concern" placeholder="Pigmentation / Acne / Scars / Hair / Anti-aging" />
+            </div>
+
+            <div class="field">
+              <label>Preferred branch</label>
+              <select name="branch">
+                <option>Gulberg</option>
+                <option>DHA Phase 4</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Preferred day/time</label>
+              <input name="time" placeholder="e.g., Saturday 5pm" />
+            </div>
+
+            <div class="field" style="grid-column:1 / -1">
+              <label>Notes (optional)</label>
+              <textarea name="notes" placeholder="Any medications, allergies, pregnancy, prior procedures?"></textarea>
+            </div>
+
+            <div style="grid-column:1 / -1; display:flex; gap:12px; flex-wrap:wrap; align-items:center">
+              <button class="btn primary" type="submit">Send on WhatsApp</button>
+              <button class="btn" type="button" id="clearFormBtn">Clear</button>
+              <span class="muted2" style="font-size:12px">You can edit the message before sending.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section id="locations">
+    <div class="container">
+      <div class="sectionTop">
+        <div>
+          <h2 class="h2 serif">Our locations</h2>
+          <p class="sub">Two branches in Lahore. Choose what’s convenient.</p>
+        </div>
+      </div>
+
+      <div class="grid2 reveal">
+        <div class="card">
+          <div class="pill"><span class="dot"></span>Gulberg</div>
+          <h3 class="serif" style="margin:14px 0 0; font-size:22px">Dr. Zarqa’s Clinic — Gulberg</h3>
+          <p class="muted" style="margin-top:10px">
+            71-F Main Boulevard, Above Zoro Burger, Opposite Cue Cinema, Gulberg II, Lahore.
+          </p>
+          <div style="margin-top:14px; border-radius:22px; overflow:hidden; border:1px solid var(--line)">
+            <iframe title="Gulberg Map" style="width:100%; height:260px; border:0"
+              src="https://www.google.com/maps?q=71-F%20Main%20Boulevard%2C%20Gulberg%20II%2C%20Lahore&output=embed"
+              loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="pill"><span class="dot"></span>DHA Phase 4</div>
+          <h3 class="serif" style="margin:14px 0 0; font-size:22px">Dr. Zarqa’s Clinic — DHA Phase 4</h3>
+          <p class="muted" style="margin-top:10px">
+            <!-- Replace this -->
+            Address: (add your exact DHA address here)
+          </p>
+          <div style="margin-top:14px; border-radius:22px; overflow:hidden; border:1px solid var(--line); background:rgba(0,0,0,.18); height:260px; display:grid; place-items:center" class="muted2">
+            Add DHA Google Map embed here
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row" style="justify-content:space-between; flex-wrap:wrap">
+        <div>
+          <div class="serif" style="font-size:18px; color:var(--fg)">Dr. Zarqa’s Aesthetic Skin Clinic</div>
+          <div style="margin-top:6px">Luxury dermatology & aesthetics • Lahore</div>
+        </div>
+        <div class="row">
+          <a class="btn small" href="#top">Back to top</a>
+          <a class="btn small primary" id="footerWhatsApp" href="#">WhatsApp</a>
+        </div>
+      </div>
+
+      <div style="margin-top:16px; font-size:12px; color:var(--muted2); line-height:1.7">
+        Disclaimer: Results vary by individual. Treatments are provided after assessment and suitability checks.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a class="floatWA" id="floatWA" href="#" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 21a9 9 0 1 0-7.85-4.6L3 21l4.77-1.1A8.96 8.96 0 0 0 12 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M9.2 9.2c.3-.6.6-.6.9-.6h.7c.2 0 .4.1.5.3l.7 1.7c.1.2 0 .5-.2.6l-.6.5c.6 1.1 1.5 2 2.6 2.6l.5-.6c.2-.2.4-.3.6-.2l1.7.7c.2.1.3.3.3.5v.7c0 .3 0 .6-.6.9-.6.3-1.9.7-4-.5-2.1-1.2-3.9-3-5-5.1-1.2-2.1-.8-3.4-.5-4Z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <script>
+    // ========= CONFIG (CHANGE THESE) =========
+    const WHATSAPP_NUMBER_E164 = "923001234567"; // e.g., 923001112233 (Pakistan)
+    const CLINIC_NAME = "Dr. Zarqa’s Aesthetic Skin Clinic";
+    // ========================================
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (!id || id === '#') return;
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    });
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        if (ent.isIntersecting) ent.target.classList.add('in');
+      });
+    }, {threshold: 0.14});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Accordion
+    const accItems = Array.from(document.querySelectorAll('.accItem'));
+    accItems.forEach(item => {
+      const btn = item.querySelector('.accBtn');
+      const icon = item.querySelector('.accIcon');
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        accItems.forEach(i => { i.classList.remove('open'); i.querySelector('.accIcon').textContent = "+"; });
+        if (!isOpen) { item.classList.add('open'); icon.textContent = "–"; }
+      });
+    });
+
+    // Before/After slider
+    const baRange = document.getElementById('baRange');
+    const baAfter = document.getElementById('baAfter');
+    if (baRange && baAfter) {
+      baRange.addEventListener('input', () => {
+        baAfter.style.width = `${baRange.value}%`;
+      });
+    }
+
+    // WhatsApp helpers
+    function waLink(message){
+      return `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${encodeURIComponent(message)}`;
+    }
+    const defaultMsg = `Hi ${CLINIC_NAME}, I want to book a consultation.`;
+
+    ["navWhatsApp","heroWhatsApp","benefitsWhatsApp","bookWhatsAppA","footerWhatsApp","floatWA"].forEach(id=>{
+      const el = document.getElementById(id);
+      if (el) el.href = waLink(defaultMsg);
+    });
+
+    // Booking form -> WhatsApp message
+    const form = document.getElementById('bookingForm');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const msg =
+`Hi ${CLINIC_NAME},
+Name: ${data.get('name')}
+Phone: ${data.get('phone')}
+Concern: ${data.get('concern')}
+Branch: ${data.get('branch')}
+Preferred time: ${data.get('time') || '-'}
+Notes: ${data.get('notes') || '-'}
+
+Please confirm an appointment slot.`;
+      window.open(waLink(msg), "_blank");
+    });
+
+    document.getElementById('clearFormBtn')?.addEventListener('click', () => form?.reset());
+
+    // Optional audio gate (matches Organimo “enable audio” vibe)
+    const gate = document.getElementById('audioGate');
+    const audio = document.getElementById('bgAudio');
+    let muted = true;
+
+    function closeGate(){ gate.classList.add('hidden'); setTimeout(()=>gate.remove(), 350); }
+
+    document.getElementById('enableAudioBtn')?.addEventListener('click', async () => {
+      try {
+        if (audio && audio.querySelector('source')?.getAttribute('src')) {
+          audio.volume = 0.35;
+          await audio.play();
+          muted = false;
+        }
+      } catch(_) {}
+      closeGate();
+    });
+
+    document.getElementById('skipAudioBtn')?.addEventListener('click', () => {
+      closeGate();
+    });
+
+    // Press M to mute/unmute (if audio exists)
+    window.addEventListener('keydown', async (e) => {
+      if (e.key.toLowerCase() !== 'm') return;
+      if (!audio) return;
+      const hasSrc = audio.querySelector('source')?.getAttribute('src');
+      if (!hasSrc) return; // no audio provided
+      try{
+        if (muted) { await audio.play(); muted=false; }
+        else { audio.pause(); muted=true; }
+      }catch(_){}
+    });
+
+    // Portrait nudge like Organimo (only on small screens)
+    const rotate = document.getElementById('rotateNudge');
+    function checkOrientation(){
+      const isSmall = window.innerWidth <= 900;
+      const isLandscape = window.innerWidth > window.innerHeight;
+      rotate.style.display = (isSmall && isLandscape) ? "flex" : "none";
+    }
+    window.addEventListener('resize', checkOrientation);
+    checkOrientation();
+  </script>
+</body>
+</html>
